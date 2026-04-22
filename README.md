@@ -1,5 +1,7 @@
 # ተና SecondLoop Ecommerce 🇪🇹
 
+> Last updated: 2026-04-22
+
 > **Ethiopia's Trusted C2C Marketplace for Used Goods**
 > Secure escrow payments · Phone verification · Real-time messaging · Admin dashboard
 
