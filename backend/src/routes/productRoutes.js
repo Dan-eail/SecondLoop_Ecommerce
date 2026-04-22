@@ -1,0 +1,13 @@
+const express = require('express');
+const router = express.Router();
+const { getProducts, getProductById, createProduct, updateProduct, deleteProduct, getUserProducts, toggleWishlist } = require('../controllers/productController');
+const { protect } = require('../middleware/authMiddleware');
+const { uploadMultiple } = require('../middleware/uploadMiddleware');
+const { searchLimiter } = require('../middleware/rateLimitMiddleware');
+router.get('/', searchLimiter, getProducts);
+router.post('/', protect, uploadMultiple('images', 8), createProduct);
+router.get('/:id', getProductById);
+router.put('/:id', protect, uploadMultiple('images', 8), updateProduct);
+router.delete('/:id', protect, deleteProduct);
+router.post('/:id/wishlist', protect, toggleWishlist);
+module.exports = router;

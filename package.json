@@ -1,0 +1,17 @@
+{
+  "name": "tena-marketplace",
+  "private": true,
+  "version": "1.0.0",
+  "description": "SecondLoop Ecommerce monorepo helper scripts (frontend + backend)",
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c green,cyan \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "seed": "npm run seed --prefix backend",
+    "start": "npm run start --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
+

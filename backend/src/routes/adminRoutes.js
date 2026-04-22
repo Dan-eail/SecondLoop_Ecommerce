@@ -1,0 +1,13 @@
+const express = require('express');
+const router = express.Router();
+const { getAllUsers, updateUserStatus, getProductsForModeration, moderateProduct, releaseEscrowPayment, resolveDispute, getAnalytics } = require('../controllers/adminController');
+const { protect, adminOnly } = require('../middleware/authMiddleware');
+router.use(protect, adminOnly);
+router.get('/users', getAllUsers);
+router.put('/users/:userId', updateUserStatus);
+router.get('/products', getProductsForModeration);
+router.put('/products/:productId', moderateProduct);
+router.post('/orders/:orderId/release-payment', releaseEscrowPayment);
+router.post('/orders/:orderId/resolve-dispute', resolveDispute);
+router.get('/analytics', getAnalytics);
+module.exports = router;

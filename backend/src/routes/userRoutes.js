@@ -1,0 +1,13 @@
+const express = require('express');
+const router = express.Router();
+const { getUserProfile, uploadProfileImage, getWishlist, getNotifications, markNotificationRead } = require('../controllers/userController');
+const { getUserProducts } = require('../controllers/productController');
+const { protect } = require('../middleware/authMiddleware');
+const { upload } = require('../middleware/uploadMiddleware');
+router.get('/wishlist', protect, getWishlist);
+router.get('/notifications', protect, getNotifications);
+router.patch('/notifications/:id/read', protect, markNotificationRead);
+router.get('/:userId', getUserProfile);
+router.get('/:userId/products', getUserProducts);
+router.post('/profile/image', protect, upload.single('image'), uploadProfileImage);
+module.exports = router;

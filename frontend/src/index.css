@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply m-0 p-0 box-border; }
+  body { @apply font-sans text-gray-800 bg-secondary-light antialiased; }
+  h1, h2, h3, h4, h5, h6 { @apply font-semibold; }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-gray-200 rounded; }
+  ::-webkit-scrollbar-thumb { @apply bg-primary-orange rounded; }
+}
+
+@layer components {
+  .container-custom { @apply container mx-auto px-4 sm:px-6 lg:px-8; }
+  .btn-primary { @apply bg-primary-orange text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-outline { @apply border-2 border-primary-orange text-primary-orange font-semibold py-2.5 px-5 rounded-lg transition-all duration-300 hover:bg-primary-orange hover:text-white focus:outline-none; }
+  .btn-secondary { @apply bg-primary-green text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-green-700 focus:outline-none; }
+  .input-field { @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition-all duration-200; }
+  .card { @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg; }
+  .badge { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium; }
+  .badge-success { @apply bg-green-100 text-green-800; }
+  .badge-warning { @apply bg-yellow-100 text-yellow-800; }
+  .badge-error { @apply bg-red-100 text-red-800; }
+  .badge-info { @apply bg-blue-100 text-blue-800; }
+  .loading-spinner { @apply animate-spin rounded-full border-4 border-gray-200 border-t-primary-orange; }
+  .skeleton { @apply bg-gray-200 rounded animate-pulse; }
+}
+
+@layer utilities {
+  .rtl { direction: rtl; }
+  .line-clamp-1 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+  .line-clamp-2 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .line-clamp-3 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+}

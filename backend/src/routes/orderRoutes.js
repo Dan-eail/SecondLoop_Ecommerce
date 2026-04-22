@@ -1,0 +1,12 @@
+const express = require('express');
+const router = express.Router();
+const { createOrder, uploadPaymentProof, confirmDelivery, fileDispute, getUserOrders, getOrderDetails } = require('../controllers/orderController');
+const { protect } = require('../middleware/authMiddleware');
+const { upload } = require('../middleware/uploadMiddleware');
+router.get('/', protect, getUserOrders);
+router.post('/', protect, createOrder);
+router.get('/:orderId', protect, getOrderDetails);
+router.post('/:orderId/payment-proof', protect, upload.single('paymentProof'), uploadPaymentProof);
+router.post('/:orderId/confirm-delivery', protect, confirmDelivery);
+router.post('/:orderId/dispute', protect, upload.array('evidence', 5), fileDispute);
+module.exports = router;
