@@ -18,3 +18,6 @@
 ## Phase 6
 - Documented frontend app layout and routing milestone completion.
 
+## Phase 7
+- Documented product listing and detail pages milestone completion.
+
