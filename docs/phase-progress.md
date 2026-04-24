@@ -12,3 +12,6 @@
 ## Phase 4
 - Documented product CRUD APIs and validation milestone completion.
 
+## Phase 5
+- Documented cart and order backend logic milestone completion.
+
