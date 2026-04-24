@@ -24,3 +24,6 @@
 ## Phase 8
 - Documented cart UI and checkout flow milestone completion.
 
+## Phase 9
+- Documented frontend-backend API integration and error handling milestone.
+
