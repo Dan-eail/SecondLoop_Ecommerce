@@ -9,3 +9,6 @@
 ## Phase 3
 - Documented authentication routes and middleware implementation milestone.
 
+## Phase 4
+- Documented product CRUD APIs and validation milestone completion.
+
