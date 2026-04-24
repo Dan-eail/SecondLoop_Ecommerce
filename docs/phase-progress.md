@@ -21,3 +21,6 @@
 ## Phase 7
 - Documented product listing and detail pages milestone completion.
 
+## Phase 8
+- Documented cart UI and checkout flow milestone completion.
+
