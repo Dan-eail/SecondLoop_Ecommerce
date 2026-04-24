@@ -6,3 +6,6 @@
 ## Phase 2
 - Documented database connection and models milestone completion notes.
 
+## Phase 3
+- Documented authentication routes and middleware implementation milestone.
+
