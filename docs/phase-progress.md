@@ -15,3 +15,6 @@
 ## Phase 5
 - Documented cart and order backend logic milestone completion.
 
+## Phase 6
+- Documented frontend app layout and routing milestone completion.
+
